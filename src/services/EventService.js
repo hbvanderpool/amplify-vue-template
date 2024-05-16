@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3',
+  baseURL: 'https://n97cxpxnd5.execute-api.us-east-2.amazonaws.com/dev',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 export default {
   getEvents() {
-    return apiClient.get('/events')
+    return apiClient.get('/FetchEvents')
   },
   getEvent(id) {
     return apiClient.get('/events/' + id)
